@@ -2,7 +2,7 @@ const _ = require('lodash');
 const RamPersistProvider = require('../persistProvider/RamPersistProvider');
 const ramPersist = new RamPersistProvider();
 const ResourceService = require('../services/resourceService');
-const otherInstanceUrl = _.last(process.env.url);
+const otherInstanceUrl = process.env.url;
 const resourceService = new ResourceService(ramPersist, otherInstanceUrl);
 class ResponderController{
     async handlePostRequest(req, res){
