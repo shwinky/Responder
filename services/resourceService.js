@@ -20,7 +20,7 @@ class resourceService{
                     retValue=otherInstanceValue;
                 }
                 console.log(` other instance timstamp: ${otherInstanceValue.timestamp} bigger:${otherInstanceValue.timestamp>retValue.timestamp} value: ${otherInstanceValue.value}`)
-                if(otherInstanceValue.timestamp && otherInstanceValue.timestamp<retValue.timestamp && otherInstanceValue.value){
+                if(otherInstanceValue.timestamp && new Date(otherInstanceValue.timestamp)>new Date(retValue.timestamp) && otherInstanceValue.value){
                     console.log('other instance is newer, returning other instance');
                     retValue=otherInstanceValue;
                 }
