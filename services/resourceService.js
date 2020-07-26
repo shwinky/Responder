@@ -12,7 +12,7 @@ class resourceService{
         try {
             const otherInstanceResponse = await getAsync({url:`${this.otherInstanceUrl}/resource`});
             const otherInstanceValue = JSON.parse(_.get(otherInstanceResponse,'body'));
-            console.log(`value from other instance: ${otherInstanceValue}`);
+            console.log(`value from other instance: ${otherInstanceValue.value}`);
             if(otherInstanceValue){
                 console.log(`other instance timestamp: ${otherInstanceValue.timestamp}, persist timestamp: ${retValue.timestamp}`);
                 if(!retValue || !retValue.timestamp){
