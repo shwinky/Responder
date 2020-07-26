@@ -5,7 +5,7 @@ const getAsync = util.promisify(request.get);
 class resourceService{
     constructor(persistProvider, url){
         this.persistProvider = persistProvider;
-        this.otherInstanceUrl = url;
+        this.otherInstanceUrl = `http://${url}:3000`;
     }
     async getResource(){
         let retValue= this.persistProvider.getResource();
