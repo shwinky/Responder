@@ -43,13 +43,14 @@ describe("Services tests", () => {
         mockPersist.getResource = jest.fn().mockReturnValue(expectedValue);
         const resourceService = new ResourceService(mockPersist,"SomeUrl");
         const retValue = await resourceService.getResource();
-        expect(retValue).toEqual(getAsyncResponse.value);
+        const jsonResponse = JSON.parse(getAsyncResponse);
+        expect(retValue).toEqual(jsonResponse.value);
     });
     it('resource service should return the other instance value since persist is empty', async () => {
         const expectedValue ={}
         mockPersist.getResource = jest.fn().mockReturnValue(expectedValue);
         const resourceService = new ResourceService(mockPersist,"SomeUrl");
-        const retValue = await resourceService.getResource();
-        expect(retValue).toEqual(getAsyncResponse.value);
+        const jsonResponse = JSON.parse(getAsyncResponse);
+        expect(retValue).toEqual(jsonResponse.value);
     });
 });
