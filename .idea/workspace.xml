@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ff5b5b1-b574-4ca6-a660-0cc86761d2c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/resourceService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/resourceService.js" afterDir="false" />
-    </list>
+    <list default="true" id="4ff5b5b1-b574-4ca6-a660-0cc86761d2c1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -236,7 +231,7 @@
       <workItem from="1595778676614" duration="1785000" />
       <workItem from="1595780523672" duration="1820000" />
       <workItem from="1595782392589" duration="1724000" />
-      <workItem from="1595784231537" duration="1014000" />
+      <workItem from="1595784231537" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="remove pug">
       <created>1595777408761</created>
@@ -336,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595783102001</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added json response">
+      <created>1595785565035</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1595785565035</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -357,7 +359,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9009000" />
+    <option name="totallyTimeSpent" value="9617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1613" height="873" extended-state="6" />
