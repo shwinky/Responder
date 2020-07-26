@@ -19,7 +19,7 @@ class ResponderController{
         try {
             const resolveResource = ramPersist.getResource();
             if(resolveResource){
-                return res.status(200).send(resolveResource);
+                return res.status(200).json(resolveResource);
             }
             return res.status(200).send('Nothing in the resource');
         } catch (e) {
