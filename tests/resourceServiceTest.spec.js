@@ -1,11 +1,11 @@
 jest.mock('util');
 const util = require('util');
-const getAsyncResponse = {
+const getAsyncResponse = JSON.stringify({
     "timestamp": "2020-07-26T13:59:22.280Z",
     "value": {
         "something": "blabla1"
     }
-}
+})
 util.promisify = jest.fn(() => ()=>({body:getAsyncResponse}));
 const ResourceService = require('../services/resourceService');
 
