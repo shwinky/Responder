@@ -14,7 +14,10 @@ class resourceService{
             const otherInstanceValue = _.get(otherInstanceResponse,'body');
             console.log(`value from other instance: ${otherInstanceValue}`);
             if(otherInstanceValue){
-                if(otherInstanceValue.timestamp && otherInstanceValue.timestamp>retValue.timestamp && otherInstanceValue.value){
+                if(!retValue || !retValue.timestamp){
+                    retValue=otherInstanceValue;
+                }
+                else if(otherInstanceValue.timestamp && otherInstanceValue.timestamp>retValue.timestamp && otherInstanceValue.value){
                     retValue=otherInstanceValue;
                 }
             }
