@@ -10,8 +10,9 @@ class resourceService{
     async getResource(){
         let retValue= this.persistProvider.getResource();
         try {
-            const otherInstanceResponse = await getAsync({url:`${this.otherInstanceUrl}/api/resource`});
+            const otherInstanceResponse = await getAsync({url:`${this.otherInstanceUrl}/resource`});
             const otherInstanceValue = _.get(otherInstanceResponse,'body');
+            console.log(`value from other instance: ${otherInstanceValue}`);
             if(otherInstanceValue){
                 if(otherInstanceValue.timestamp && otherInstanceValue.timestamp>retValue.timestamp && otherInstanceValue.value){
                     retValue=otherInstanceValue;
