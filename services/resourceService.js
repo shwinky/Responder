@@ -15,9 +15,11 @@ class resourceService{
             console.log(`value from other instance: ${otherInstanceValue}`);
             if(otherInstanceValue){
                 if(!retValue || !retValue.timestamp){
+                    console.log('nothing in persist, returning other instance');
                     retValue=otherInstanceValue;
                 }
                 else if(otherInstanceValue.timestamp && otherInstanceValue.timestamp>retValue.timestamp && otherInstanceValue.value){
+                    console.log('other instance is newer, returning other instance');
                     retValue=otherInstanceValue;
                 }
             }
