@@ -26,6 +26,7 @@ class resourceService{
         } catch (err) {
             console.log(err);
         }
+        console.log(`returning ${retValue.value}`);
         return retValue.value;
 
     }
