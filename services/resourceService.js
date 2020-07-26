@@ -14,11 +14,11 @@ class resourceService{
             const otherInstanceValue = JSON.parse(_.get(otherInstanceResponse,'body'));
             console.log(`value from other instance: ${otherInstanceValue}`);
             if(otherInstanceValue){
+                console.log(`other instance timestamp: ${otherInstanceValue.timestamp}, persist timestamp: ${retValue.timestamp}`);
                 if(!retValue || !retValue.timestamp){
                     console.log('nothing in persist, returning other instance');
                     retValue=otherInstanceValue;
                 }
-                console.log(`other instance timestamp: ${otherInstanceValue.timestamp}, persist timestamp: ${retValue.timestamp}`);
                 else if(otherInstanceValue.timestamp && otherInstanceValue.timestamp>retValue.timestamp && otherInstanceValue.value){
                     console.log('other instance is newer, returning other instance');
                     retValue=otherInstanceValue;
