@@ -12,23 +12,17 @@ class resourceService{
         try {
             const otherInstanceResponse = await getAsync({url:`${this.otherInstanceUrl}/resource`});
             const otherInstanceValue = JSON.parse(_.get(otherInstanceResponse,'body'));
-            console.log(`value from other instance: ${otherInstanceValue.value}`);
             if(otherInstanceValue){
-                console.log(`other instance timestamp: ${otherInstanceValue.timestamp}, persist timestamp: ${retValue.timestamp}`);
                 if(!retValue || !retValue.timestamp){
-                    console.log('nothing in persist, returning other instance');
                     retValue=otherInstanceValue;
                 }
-                console.log(` other instance timstamp: ${otherInstanceValue.timestamp} bigger:${otherInstanceValue.timestamp>retValue.timestamp} value: ${otherInstanceValue.value}`)
-                if(otherInstanceValue.timestamp && new Date(otherInstanceValue.timestamp)>new Date(retValue.timestamp) && otherInstanceValue.value){
-                    console.log('other instance is newer, returning other instance');
+                else if(otherInstanceValue.timestamp && new Date(otherInstanceValue.timestamp)>new Date(retValue.timestamp) && otherInstanceValue.value){
                     retValue=otherInstanceValue;
                 }
             }
         } catch (err) {
             console.log(err);
         }
-        console.log(`returning ${retValue.value}`);
         return retValue.value;
 
     }
