@@ -8,7 +8,7 @@ class ResponderController{
     async handlePostRequest(req, res){
         try {
             const resource = _.get(req,'body');
-            ramPersist.setResource(resource);
+            console.log(resource)
             return res.status(200).send('Success');
         } catch (e) {
             console.log(e)
